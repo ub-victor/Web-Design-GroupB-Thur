@@ -1,10 +1,11 @@
-h2{
-    background-color: #1865B6;
-    color: white;
-}
-
 body{
     background-image: ulr ('Heaven.jpeg');
     background-repeat: no-repeat;
     background-size: cover;;;
 }
+
+h2{
+    background-color: #1865B6;
+    color: white;
+}
+
