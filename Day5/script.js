@@ -1,4 +1,5 @@
-let a = prompt("Enter value of A");
+calculate (()=>{
+    let a = prompt("Enter value of A");
     let b = prompt("Enter value of B");
 
     // Convert inputs to numbers
@@ -12,3 +13,5 @@ let a = prompt("Enter value of A");
       const c = A * B;
       document.write("Result: " + c);
     }
+});
+
