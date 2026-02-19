@@ -8,4 +8,8 @@ function Calculate(){
   function Change(){
     document.getElementById('this').innerHTML="Display This"
   }
+
+   function Mult(){
+    let A1
+   }
 }
