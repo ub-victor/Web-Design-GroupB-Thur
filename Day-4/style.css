@@ -1,5 +1,5 @@
 body{
-    background-image: ulr ('Heaven.jpeg');
+    background-image:url('Heaven.jpeg');
     background-repeat: no-repeat;
     background-size: cover;;;
 }
