@@ -9,7 +9,7 @@ function Calculate(){
     document.getElementById('this').innerHTML="Display This"
   }
 
-   function Mult(){
+   function Mult(){ 
     let A1
    }
 }
