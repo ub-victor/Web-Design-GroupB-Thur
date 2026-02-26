@@ -19,4 +19,13 @@ function Annual(){
     disply.innerHTML = ASalary;
 }
 
-
+function Login(){
+    let disply = document.getElementById('di');
+    let uname = document.getElementById('uname').value.trim();
+    let ps = document.getElementById('ps').value.trim();
+    if(uname === "victoire" && ps === "Admin123"){
+         disply.innerHTML = '<a href = "index.html">Login Successful</a>' 
+    }else{
+        disply.innerHTML = 'wrong name or password'
+    }
+}
