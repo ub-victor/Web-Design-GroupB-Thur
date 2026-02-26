@@ -18,3 +18,5 @@ function Annual(){
     let ASalary = MSalary * 12;
     disply.innerHTML = ASalary;
 }
+
+
