@@ -1,5 +1,7 @@
-body{
+.body{
+    border: 8px solid black;
     display: flex;
+    justify-content: flex-start;
     
 }
 .box{
