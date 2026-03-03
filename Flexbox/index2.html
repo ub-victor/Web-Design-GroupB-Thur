@@ -7,9 +7,9 @@
         body{
             display: flex;
             flex-direction: column;
-            /* justify-content: center; Aligns items along the main axis (horizontal axis in a row direction). */
-            align-items: center; /*It centers on the cross axis, Aligns items along the cross axis (vertical axis in a row direction).*/
-
+            justify-content: center;  /* vertical centering */
+            align-items: center;      /* horizontal centering */
+            height: 100vh;            /* needed to see vertical centering */
         }
     </style>
 </head>
@@ -25,6 +25,16 @@
 </html>
 
 <!-- 
+Justify-content : Aligns items along the main axis(horizontal axis in a row direction). take a way : it work only if the flex-direction: row
+Align-items: Aligns items along the cross axis(Vertical axis in a row direction)
+
+Then in Flexbox:
+    - Main axis -> Controlled by flex-direction
+    - Justify-content- works on the main axis
+    - Align-items -> works on the cross axis
+    But when the flex-direction : colomn, the axes changeM
+        main axis : Verticle
+        cross axis : Horizontal
 
 
 
