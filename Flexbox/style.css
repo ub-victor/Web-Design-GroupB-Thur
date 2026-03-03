@@ -1,7 +1,7 @@
 .body{
     border: 8px solid black;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     
 }
 .box{
