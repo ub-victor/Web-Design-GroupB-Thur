@@ -2,7 +2,7 @@ body{
     height: 100vh;
     border: 8px solid black;
     display: flex;
-    justify-content:center; /* This works on the main axis*/
+    justify-content:flex-start; /* This works on the main axis*/
     /* We use the align-items property to control the alignment aong the cross axis */
     /* align-items: center;     */
     /* flex-direction: column; will reverse the divs 5-1 */
