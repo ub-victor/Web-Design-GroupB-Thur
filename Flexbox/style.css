@@ -2,12 +2,13 @@ body{
     height: 100vh;
     border: 8px solid black;
     display: flex;
-    justify-content:flex-start; /* This works on the main axis*/
+    justify-content:center; /* This works on the main axis*/
     /* We use the align-items property to control the alignment aong the cross axis */
     /* align-items: center;     */
-    flex-direction: row; /*will reverse the divs 5-1*/
+    /* flex-direction: column; will reverse the divs 5-1 */
     /* to center the box vertically you can use  */
-    align-items:flex-end;
+    align-items:center;
+    height: 100vh;
 
 }
 .box{
