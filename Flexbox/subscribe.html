@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .subbtn {
+            background-color: rgb(44, 181, 235);
+            height: 36px;
+            width: 120px;
+            color: white;
+            font-size: 17px;
+            border-radius: 20px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .subbtn:hover{
+            background-color: rgb(209, 233, 243);
+            color: black;
+            transition: 2s;
+        }
+
+        .container {
+            background-color: black;
+            width: 340px;
+            height: 130px;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-left: 10px;
+            padding-top: 10px;
+            padding-left: 10px;
+            box-shadow: 10px 10px 20px 0px  #7777a5;
+        }
+
+        .title {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: lightgray;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="title">Subscribe to Premium</h2>
+        <p class="description">Subscribe to unlock new features and if eligible, receive a share of revenue.</p>
+        <button class="subbtn">subscribe</button>
+    </div>
+
+</body>
+
+</html>
