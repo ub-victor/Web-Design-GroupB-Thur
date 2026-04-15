@@ -1,0 +1,114 @@
+<html>
+<head>
+    
+    <title>HOME - Teacher & Marks System</title>
+    <link rel="stylesheet" href="css/worka.css">
+<script>
+function calculateTotal() {
+    let m1 = parseFloat(document.getElementById("c").value) || 0;
+    let m2 = parseFloat(document.getElementById("ct").value) || 0;
+    let m3 = parseFloat(document.getElementById("fa").value) || 0;
+
+    let total = m1 + m2 + m3;
+    document.getElementById("total").value = total;
+}
+
+function calculateAverage() {
+    let m1 = parseFloat(document.getElementById("c").value) || 0;
+    let m2 = parseFloat(document.getElementById("ct").value) || 0;
+    let m3 = parseFloat(document.getElementById("fa").value) || 0;
+
+    let avg = (m1 + m2 + m3) / 3;
+    document.getElementById("average").value = avg.toFixed(2);
+}
+
+function clearFields() {
+    document.getElementById("na").value = "";
+    document.getElementById("ro").value = "";
+    document.getElementById("de").value = "";
+    document.getElementById("c").value = "";
+    document.getElementById("ct").value = "";
+    document.getElementById("fa").value = "";
+    document.getElementById("total").value = "";
+    document.getElementById("average").value = "";
+}
+
+function printPage() {
+    window.print();
+}
+</script>
+</head>
+<body bgcolor="#00FFFF">
+
+<!-- Top Navigation -->
+<table border="0" class="table1" width="100%" height="7%">
+<tr>
+    <td><img src="img/pic3.jpeg" width="50" alt="logo"></td>
+    <td>HOME</td>
+    <td>APPLICATION</td>
+    <td>MARKS</td>
+    <td>STUDENTS</td>
+    <td>ACADEMICS</td>
+</tr>
+</table>
+
+<!-- Banner -->
+<table border="3" class="T2">
+<tr><td width="20%" valign="top"><img src="img/pic1.jpeg" alt="banner"></td></tr>
+</table>
+
+<!-- Main Content -->
+<table border="3" width="100%" height="60%">
+<tr>
+<td><img src="img/pic2.jpeg" width="100%" height="90%" valign="top" alt=""></td>
+    <td width="35%" valign="top" class="white">
+        
+        <h3>Teacher Management System - TMS</h3><br>
+        <p> TMIS provides an integrated solution for managing teacher data promoting transparencyand enabling evidence-based decision making.</p><br>
+        <h3>Transforming Teacher Management in Rwanda</h3><br>
+        <p>Rwanda’s trusted platform for efficient teacher management centralizing recrutment deployment and career support to strengthen education</p><br>
+        <h3>Comprehensive Teacher Management:</h3><br>
+        <ul>
+            <li>Post Distribution</li>
+            <li>Post Management</li>
+            <li>Teacher Transfers</li>
+            <li>Maternity Leave</li>
+            <li>Scholarship Management</li>
+            <li>Continuing Professional Development</li>
+        </ul>
+    </td>
+
+    <!-- Marks Calculator -->
+    <td width="25%" height="90%" valign="top" class="white">
+        <h2>Student Marks System</h2>
+         <form class="fo" action="app.php" method="post">
+<input type="hidden" name="action" value="save_marks">
+<pre>
+  Student Names: <input type="text" name="n" id="na">
+
+    Roll Number: <input type="number" name="r" id="ro">
+
+     Department: <input type="text" name="d" id="de">
+
+CAT1 Marks / 30: <input type="number"  max="30" name="cat1" id="c">
+
+CAT2 Marks / 30: <input type="number"  max="30" name="cat2" id="ct">
+
+ FAT Marks / 40: <input type="number"  max="40" name="fat" id="fa">
+                   <hr>
+   <input type="button" value="TOTAL" onclick="calculateTotal()"> <input type="button" value="AVERAGE" onclick="calculateAverage()"> <input type="button" value="DELETE" onclick="clearFields()">
+
+     <div class="out">   <input type="text" id="total" readonly>   <input type="text" id="average" readonly>  <input type="text" readonly> </div> <hr>
+    <input type="submit" value="SAVE IN DB"> <input type="submit" name="retrieve" value="RETRIEVE FROM DB" onclick="document.querySelector('[name=action]').value='retrieve_marks'"> <input type="button" value="PRINT" onclick="printPage()">
+    </pre>                   
+</form>
+
+    <!-- Right image -->
+    <td width="20%" valign="center">
+        <img src="img/pic4.jpeg" width="100%" height="90%" alt="">
+    </td>
+</tr>
+</table>
+
+</body>
+</html>

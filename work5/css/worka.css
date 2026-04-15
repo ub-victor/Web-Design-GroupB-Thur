@@ -1,0 +1,38 @@
+*{
+    margin:4px;
+    padding:2px;
+    box-sizing:border-box;
+}
+
+h3{
+    background-color: blue;
+    border-radius: 18px;
+
+}
+
+.table1{
+    background-color: black;
+    color: white;    
+}
+
+.T2{
+  width: 100%;
+  height: 60px;
+}
+
+.T2 img{
+    width: 100%;
+    height: 60px;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+.out input{
+    width: 60px;
+}
+
+.white{
+   background-color: white;
+}

@@ -1,0 +1,50 @@
+body {
+    background-color: white;
+}
+
+.table1 {
+
+    padding: 10px;
+    margin: 5px;
+    border-style: outset;
+    border-color: darkgrey;
+    border-width: 15px;
+    align: center;
+}
+
+#T1 {
+    background-image: url("../img/login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: black;
+    border-style: outset;
+    border-color: #8FB31D;
+    border-width: 9px;
+    border-radius: 10px;
+}
+
+#T2{
+    background-image: url("../img/back.jpeg"); 
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-style: outset;
+    border-color: #8FB31D;
+    border-width: 9px;
+    border-radius: 10px;
+}
+
+#t0{
+   align: center;
+    border-style: outset;
+    border-color: grey;
+    border-width: 10px;
+}
+
+.t0{
+   font-weight:bold;
+   font-size:18px;
+   font-family: "Times New Roman", Georgia, serif;
+}
