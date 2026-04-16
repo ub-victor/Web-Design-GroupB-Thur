@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "accountDB");
+$conn = new mysqli("localhost", "root", "Ushindi123!", "accountDB");
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -70,7 +70,7 @@ elseif ($action === 'save_marks') {
 }
 
 // RETRIEVE MARKS ACTION
-elseif ($action === 'retrieve_marks') {
+elseif ($action === 'retrieve_marks' || isset($_POST['retrieve'])) {
     $result = $conn->query("SELECT * FROM RecordsTB");
 
     echo "<h2>Student Records</h2>";
@@ -82,18 +82,24 @@ elseif ($action === 'retrieve_marks') {
             </tr>";
 
     if ($result) {
-        while ($row = $result->fetch_assoc()) {
-            echo "<tr>
-                    <td>{$row['name']}</td>
-                    <td>{$row['roll']}</td>
-                    <td>{$row['department']}</td>
-                    <td>{$row['cat1']}</td>
-                    <td>{$row['cat2']}</td>
-                    <td>{$row['fat']}</td>
-                    <td>{$row['total']}</td>
-                    <td>{$row['average']}</td>
-                  </tr>";
+        if ($result->num_rows === 0) {
+            echo "<tr><td colspan='8' style='text-align:center;'>No student records found.</td></tr>";
+        } else {
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>
+                        <td>{$row['name']}</td>
+                        <td>{$row['roll']}</td>
+                        <td>{$row['department']}</td>
+                        <td>{$row['cat1']}</td>
+                        <td>{$row['cat2']}</td>
+                        <td>{$row['fat']}</td>
+                        <td>{$row['total']}</td>
+                        <td>{$row['average']}</td>
+                      </tr>";
+            }
         }
+    } else {
+        echo "<tr><td colspan='8' style='text-align:center;color:red;'>Error loading records.</td></tr>";
     }
 
     echo "</table>";
