@@ -207,28 +207,38 @@ function saveData() {
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
     .then(data => {
-        alert(data.message);
         if (data.status === 'success') {
+            alert(data.message);
             document.getElementById('loanForm').reset();
             document.getElementById('totalAmount').innerHTML = '₦0.00';
             document.getElementById('monthlyAmount').innerHTML = '₦0.00';
             document.getElementById('benefitRate').value = '';
             document.getElementById('benefitInfo').innerHTML = '';
             loadEmployeesList();
+        } else {
+            alert(data.message);
         }
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('❌ Error saving data');
+        alert('❌ Network Error: ' + error.message);
     });
 }
 
 // DISPLAY FROM DATABASE
 function displayFromDB() {
     fetch('get_data.php')
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) throw new Error('Network response failed');
+        return response.json();
+    })
     .then(data => {
         if (data.status === 'success') {
             const tbody = document.getElementById('tableBody');
@@ -258,7 +268,7 @@ function displayFromDB() {
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('❌ Error retrieving data');
+        alert('❌ Error retrieving data: ' + error.message);
     });
 }
 
@@ -268,7 +278,10 @@ function deleteAll() {
         fetch('delete_all.php', {
             method: 'POST'
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) throw new Error('Network response failed');
+            return response.json();
+        })
         .then(data => {
             alert(data.message);
             if (data.status === 'success') {
@@ -278,7 +291,7 @@ function deleteAll() {
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('❌ Error deleting data');
+            alert('❌ Error deleting data: ' + error.message);
         });
     }
 }
@@ -319,7 +332,10 @@ function searchEmployee() {
     }
 
     fetch('search_employee.php?search=' + encodeURIComponent(searchTerm))
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) throw new Error('Network response failed');
+        return response.json();
+    })
     .then(data => {
         if (data.status === 'success' && data.record) {
             const record = data.record;
@@ -338,14 +354,17 @@ function searchEmployee() {
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('❌ Error searching employee');
+        alert('❌ Error searching employee: ' + error.message);
     });
 }
 
 // LOAD EMPLOYEES LIST
 function loadEmployeesList() {
     fetch('get_employees_list.php')
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) throw new Error('Network response failed');
+        return response.json();
+    })
     .then(data => {
         const employeesList = document.getElementById('employeesList');
         employeesList.innerHTML = '';
