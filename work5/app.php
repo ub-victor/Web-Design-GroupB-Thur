@@ -74,6 +74,7 @@ elseif ($action === 'retrieve_marks' || isset($_POST['retrieve'])) {
     $result = $conn->query("SELECT * FROM RecordsTB");
 
     echo "<h2>Student Records</h2>";
+    echo "<button onclick='window.print()' style='margin-bottom:10px;padding:8px 16px;'>Print</button>";
     echo "<table border='1'>
             <tr>
                 <th>Name</th><th>Roll</th><th>Dept</th>
