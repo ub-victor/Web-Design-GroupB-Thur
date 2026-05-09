@@ -15,7 +15,7 @@ PASSWORD : <input type="password" name="password"> <br>
 </form>
     </pre>
     
-</body>
+</body> 
 </html>
 
 <?php 
