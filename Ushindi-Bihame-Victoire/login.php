@@ -20,7 +20,7 @@ PASSWORD : <input type="password" name="password"> <br>
 
 <?php
 if(isset($_POST['login'])){
-    $username = $_POST['usename']; 
+    $username = $_POST['usename'];
     $password = $_POST['password'];
 
     // Connect to database
