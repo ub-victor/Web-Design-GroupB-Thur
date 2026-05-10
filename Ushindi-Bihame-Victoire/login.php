@@ -21,7 +21,7 @@ PASSWORD : <input type="password" name="password"> <br>
 <?php
 if(isset($_POST['login'])){
     $username = $_POST['usename'];
-    $password = $_POST['password'];
+    $password = $_POST['password']; 
 
     // Connect to database
     $conn = mysqli_connect("localhost", "root", "Ushindi123!", "FinalExam2026");
