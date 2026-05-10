@@ -19,7 +19,7 @@ PASSWORD : <input type="password" name="password"> <br>
 </html>
 
 <?php
-if(isset($_POST['login'])){
+if(isset($_POST['login'])){ 
     $username = $_POST['usename'];
     $password = $_POST['password'];
 
